@@ -1,4 +1,4 @@
-package org.example;
+package org.example.services;
 
 import java.net.URI;
 import java.net.http.HttpClient;

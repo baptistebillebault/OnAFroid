@@ -1,5 +1,5 @@
 import com.fasterxml.jackson.databind.JsonNode;
-import org.example.DataFetcher;
+import org.example.services.DataFetcher;
 import org.junit.jupiter.api.Test;
 import java.util.concurrent.CompletableFuture;
 import static org.junit.jupiter.api.Assertions.*;

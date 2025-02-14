@@ -1,4 +1,4 @@
-package org.example;
+package org.example.services;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -21,7 +21,7 @@ public class WeatherDataMapper {
     }
 
     public static void main(String[] args) {
-        List<WeatherData> weatherList = readWeatherDataFromFile("weather_data.json");
+        List<WeatherData> weatherList = readWeatherDataFromFile("./src/main/resources/weather_data.json");
         weatherList.forEach(System.out::println);
     }
 }

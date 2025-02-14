@@ -1,10 +1,8 @@
-package org.example;
+package org.example.services;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import org.example.DataFetcher;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +13,7 @@ import java.util.stream.IntStream;
 
 public class DataCollector {
     private static final ObjectMapper mapper = new ObjectMapper();
-    private static final String OUTPUT_FILE = "weather_data.json";
+    private static final String OUTPUT_FILE = "./src/main/resources/weather_data.json";
 
     public static void main(String[] args) {
          final List<String> cities = List.of(

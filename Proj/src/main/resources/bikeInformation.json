@@ -1,0 +1,252 @@
+[
+    {
+        "city": "Paris",
+        "hasBike": true,
+        "numberOfBikes": 13
+    },
+    {
+        "city": "Nice",
+        "hasBike": true,
+        "numberOfBikes": 69
+    },
+    {
+        "city": "Antibes",
+        "hasBike": true,
+        "numberOfBikes": 14
+    },
+    {
+        "city": "Créteil",
+        "hasBike": false,
+        "numberOfBikes": 0
+    },
+    {
+        "city": "Nîmes",
+        "hasBike": false,
+        "numberOfBikes": 0
+    },
+    {
+        "city": "Marseille",
+        "hasBike": true,
+        "numberOfBikes": 30
+    },
+    {
+        "city": "Lyon",
+        "hasBike": true,
+        "numberOfBikes": 45
+    },
+    {
+        "city": "Toulouse",
+        "hasBike": true,
+        "numberOfBikes": 22
+    },
+    {
+        "city": "Nantes",
+        "hasBike": false,
+        "numberOfBikes": 0
+    },
+    {
+        "city": "Montpellier",
+        "hasBike": true,
+        "numberOfBikes": 12
+    },
+    {
+        "city": "Strasbourg",
+        "hasBike": true,
+        "numberOfBikes": 50
+    },
+    {
+        "city": "Bordeaux",
+        "hasBike": false,
+        "numberOfBikes": 0
+    },
+    {
+        "city": "Lille",
+        "hasBike": true,
+        "numberOfBikes": 35
+    },
+    {
+        "city": "Rennes",
+        "hasBike": true,
+        "numberOfBikes": 25
+    },
+    {
+        "city": "Reims",
+        "hasBike": true,
+        "numberOfBikes": 8
+    },
+    {
+        "city": "Saint-Étienne",
+        "hasBike": false,
+        "numberOfBikes": 0
+    },
+    {
+        "city": "Toulon",
+        "hasBike": true,
+        "numberOfBikes": 10
+    },
+    {
+        "city": "Grenoble",
+        "hasBike": true,
+        "numberOfBikes": 28
+    },
+    {
+        "city": "Dijon",
+        "hasBike": false,
+        "numberOfBikes": 0
+    },
+    {
+        "city": "Angers",
+        "hasBike": true,
+        "numberOfBikes": 18
+    },
+    {
+        "city": "Villeurbanne",
+        "hasBike": true,
+        "numberOfBikes": 11
+    },
+    {
+        "city": "Clermont-Ferrand",
+        "hasBike": true,
+        "numberOfBikes": 9
+    },
+    {
+        "city": "Aix-en-Provence",
+        "hasBike": false,
+        "numberOfBikes": 0
+    },
+    {
+        "city": "Brest",
+        "hasBike": true,
+        "numberOfBikes": 15
+    },
+    {
+        "city": "Tours",
+        "hasBike": true,
+        "numberOfBikes": 20
+    },
+    {
+        "city": "Limoges",
+        "hasBike": false,
+        "numberOfBikes": 0
+    },
+    {
+        "city": "Amiens",
+        "hasBike": true,
+        "numberOfBikes": 23
+    },
+    {
+        "city": "Perpignan",
+        "hasBike": false,
+        "numberOfBikes": 0
+    },
+    {
+        "city": "Metz",
+        "hasBike": true,
+        "numberOfBikes": 18
+    },
+    {
+        "city": "Boulogne-Billancourt",
+        "hasBike": true,
+        "numberOfBikes": 38
+    },
+    {
+        "city": "Besançon",
+        "hasBike": false,
+        "numberOfBikes": 0
+    },
+    {
+        "city": "Orléans",
+        "hasBike": true,
+        "numberOfBikes": 16
+    },
+    {
+        "city": "Saint-Denis",
+        "hasBike": true,
+        "numberOfBikes": 12
+    },
+    {
+        "city": "Argenteuil",
+        "hasBike": false,
+        "numberOfBikes": 0
+    },
+    {
+        "city": "Rouen",
+        "hasBike": true,
+        "numberOfBikes": 27
+    },
+    {
+        "city": "Mulhouse",
+        "hasBike": true,
+        "numberOfBikes": 14
+    },
+    {
+        "city": "Caen",
+        "hasBike": false,
+        "numberOfBikes": 0
+    },
+    {
+        "city": "Nancy",
+        "hasBike": true,
+        "numberOfBikes": 21
+    },
+    {
+        "city": "Montreuil",
+        "hasBike": true,
+        "numberOfBikes": 19
+    },
+    {
+        "city": "Saint-Paul",
+        "hasBike": false,
+        "numberOfBikes": 0
+    },
+    {
+        "city": "Tourcoing",
+        "hasBike": true,
+        "numberOfBikes": 33
+    },
+    {
+        "city": "Dunkerque",
+        "hasBike": true,
+        "numberOfBikes": 7
+    },
+    {
+        "city": "Nanterre",
+        "hasBike": true,
+        "numberOfBikes": 24
+    },
+    {
+        "city": "Créteil",
+        "hasBike": false,
+        "numberOfBikes": 0
+    },
+    {
+        "city": "Avignon",
+        "hasBike": true,
+        "numberOfBikes": 31
+    },
+    {
+        "city": "Poitiers",
+        "hasBike": true,
+        "numberOfBikes": 28
+    },
+    {
+        "city": "Versailles",
+        "hasBike": true,
+        "numberOfBikes": 13
+    },
+    {
+        "city": "Colombes",
+        "hasBike": false,
+        "numberOfBikes": 0
+    },
+    {
+        "city": "Vitry-sur-Seine",
+        "hasBike": true,
+        "numberOfBikes": 17
+    },
+    {
+        "city": "Aulnay-sous-Bois",
+        "hasBike": true,
+        "numberOfBikes": 11
+    }
+]
