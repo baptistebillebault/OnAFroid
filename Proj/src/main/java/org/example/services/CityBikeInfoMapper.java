@@ -25,6 +25,6 @@ public class CityBikeInfoMapper {
     }
     public List<CityBikeInfo> getBikeData(){
         return readBikeInfoFromFile("./src/main/resources/bikeInformation.json");
-    }x
+    }
 
 }
