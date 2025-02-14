@@ -18,6 +18,7 @@ public class CurrentWeather {
     @JsonProperty("condition")
     private WeatherCondition condition;
 
+
     // Getters and Setters
     public double getTemperatureC() {
         return temperatureC;
