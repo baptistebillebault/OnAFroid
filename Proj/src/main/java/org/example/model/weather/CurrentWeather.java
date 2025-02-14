@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CurrentWeather {
 
     @JsonProperty("temp_c")
-    private double temperatureC;
+    private double temperature;
 
     @JsonProperty("humidity")
     private int humidity;
@@ -20,12 +20,12 @@ public class CurrentWeather {
 
 
     // Getters and Setters
-    public double getTemperatureC() {
-        return temperatureC;
+    public double gettemperature() {
+        return temperature;
     }
 
-    public void setTemperatureC(double temperatureC) {
-        this.temperatureC = temperatureC;
+    public void settemperature(double temperature) {
+        this.temperature = temperature;
     }
 
     public int getHumidity() {
@@ -55,7 +55,7 @@ public class CurrentWeather {
     @Override
     public String toString() {
         return "CurrentWeather{" +
-                "temperatureC=" + temperatureC +
+                "temperature=" + temperature +
                 ", humidity=" + humidity +
                 ", windSpeed=" + windSpeed +
                 ", condition=" + condition +

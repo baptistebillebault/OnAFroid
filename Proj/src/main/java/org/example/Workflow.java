@@ -27,7 +27,7 @@ public class Workflow {
         List<WeatherData> filteredByRegion = filterFP.filterWeatherData(weatherDataList, byRegion);
         System.out.println("Filtered by region: " + filteredByRegion);
         double maxTempCelsius = filteredByRegion.stream()
-                .mapToDouble(weatherData -> weatherData.getCurrent().getTemperatureC())
+                .mapToDouble(weatherData -> weatherData.getCurrent().gettemperature())
                 .max()
                 .orElseThrow(() -> new RuntimeException("No weather data available"));
         System.out.println("Max temperature in Ile-de-France: " + maxTempCelsius + "°C");

@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.model.bike.CityBikeInfo;
+import org.example.model.weather.CurrentWeather;
 import org.example.model.weather.WeatherData;
 import org.example.services.CityBikeInfoMapper;
 import org.example.services.WeatherDataMapper;
@@ -17,11 +18,28 @@ public class AggregationFP {
                 .flatMap(bikeInfo ->
                         weatherList.stream()
                                 .filter(weather -> weather.getLocation().getName().equals(bikeInfo.getCity()))
-                                .filter(weather -> weather.getCurrent().getTemperatureC() > 10)
+                                .filter(weather -> weather.getCurrent().gettemperature() > 10)
                 )
                 .map(weather -> weather.getLocation().getName())
                 .collect(Collectors.toList());
     }
+    public List<WeatherData> addOneDegreeToEachCityWithBikes(List<WeatherData> weatherList, List<CityBikeInfo> bikeList) {
+        return weatherList.stream()
+                .map(weather -> {
+                    CityBikeInfo bikeInfo = bikeList.stream()
+                            .filter(bi -> bi.getCity().equals(weather.getLocation().getName()))
+                            .findFirst()
+                            .orElse(null);
+                    if (bikeInfo != null && bikeInfo.getNumberOfBikes() > 10) {
+                        CurrentWeather currentWeather = weather.getCurrent();
+                        currentWeather.settemperature(currentWeather.gettemperature() + 1);
+                        weather.setCurrent(currentWeather);
+                    }
+                    return weather;
+                })
+                .collect(Collectors.toList());
+    }
+
 
     public static void main(String[] args) {
         WeatherDataMapper weatherDataMapper = new WeatherDataMapper();
