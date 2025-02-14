@@ -3,6 +3,7 @@ package org.example.services;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.model.bike.CityBikeInfo;
+import org.example.model.weather.WeatherData;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,16 +23,8 @@ public class CityBikeInfoMapper {
             throw new RuntimeException("Error reading bike information JSON file", e);
         }
     }
+    public List<CityBikeInfo> getBikeData(){
+        return readBikeInfoFromFile("./src/main/resources/bikeInformation.json");
+    }x
 
-    // Main method to test the JSON reading and object mapping
-    public static void main(String[] args) {
-        // Path to your JSON file
-        String filename = "./src/main/resources/bikeInformation.json";
-
-        // Read the bike information from the file
-        List<CityBikeInfo> bikeInfoList = readBikeInfoFromFile(filename);
-
-        // Print out each CityBikeInfo object in the list
-        bikeInfoList.forEach(System.out::println);
-    }
 }

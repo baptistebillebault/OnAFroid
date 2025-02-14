@@ -20,8 +20,7 @@ public class WeatherDataMapper {
         }
     }
 
-    public static void main(String[] args) {
-        List<WeatherData> weatherList = readWeatherDataFromFile("./src/main/resources/weather_data.json");
-        weatherList.forEach(System.out::println);
+    public List<WeatherData> getWeatherData(){
+        return readWeatherDataFromFile("./src/main/resources/weather_data.json");
     }
 }
