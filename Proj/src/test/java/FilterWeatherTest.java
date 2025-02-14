@@ -36,4 +36,12 @@ public class FilterWeatherTest {
         assertEquals(1, filteredByCity.size());
         assertEquals("Nice", filteredByCity.get(0).getLocation().getName());
     }
+    @Test
+    public void testFilterByTemperature() {
+        FilterFP filterFP = new FilterFP();
+        int temperatureNeeded = 13;
+        Predicate<WeatherData> byCity = weatherData -> weatherData.getCurrent().getTemperatureC() > temperatureNeeded;
+        List<WeatherData> filteredByCity = filterFP.filterWeatherData(weatherDataList, byCity);
+        assertEquals(3, filteredByCity.size());
+    }
 }
