@@ -1,0 +1,12 @@
+
+E	java:S106"+Replace this use of System.out by a logger.(Õ ıöûÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(Õ ıöûÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(Õ ıöûÿÿÿÿ
+h
+java:S6204""RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(†öúš
+h
+java:S6204."RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(†öúš
+[
+java:S1128"@Remove this unused import 'org.example.model.bike.CityBikeInfo'.(¥À‰Ğøÿÿÿÿ
+_
+java:S1128"DRemove this unused import 'org.example.services.CityBikeInfoMapper'.(ã›Éûÿÿÿÿ

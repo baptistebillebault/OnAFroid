@@ -1,7 +1,9 @@
 import org.example.FilterFP;
 import org.example.ParallelFP;
+import org.example.model.bike.CityBikeInfo;
 import org.example.model.weather.CurrentWeather;
 import org.example.model.weather.WeatherData;
+import org.example.services.CityBikeInfoMapper;
 import org.example.services.WeatherDataMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,15 +12,22 @@ import java.util.List;
 import java.util.function.Predicate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class FilterWeatherTest {
 
     private List<WeatherData> weatherDataList;
+    private List<CityBikeInfo> bikeDataList;
+    private FilterFP filterFP;
 
     @BeforeEach
     public void setUp() {
-        WeatherDataMapper weatherData = new WeatherDataMapper();
-        weatherDataList = weatherData.getWeatherData();
+        WeatherDataMapper weatherDataMapper = new WeatherDataMapper();
+        CityBikeInfoMapper cityBikeInfoMapper = new CityBikeInfoMapper();
+
+        weatherDataList = weatherDataMapper.getWeatherData();
+        bikeDataList = cityBikeInfoMapper.getBikeData();
+        filterFP = new FilterFP();
     }
 
     @Test
@@ -76,5 +85,15 @@ public class FilterWeatherTest {
             double modifiedTemperature = modifiedWeatherData.get(i).getCurrent().gettemperature();
             assertEquals(originalTemperature, modifiedTemperature);
         }
+    }
+    @Test
+    public void testFilterByRegionBikesAndTemperature() {
+        String targetRegion = "Ile-de-France";
+        int minBikes = 5;
+        double minTemperature = 0;
+
+        List<String> filteredCities = filterFP.filterByRegionBikesAndTemperature(bikeDataList, weatherDataList, targetRegion, minBikes, minTemperature);
+
+        filteredCities.forEach(System.out::println);
     }
 }

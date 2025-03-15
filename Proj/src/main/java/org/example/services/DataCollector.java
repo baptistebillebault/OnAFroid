@@ -13,7 +13,7 @@ import java.util.stream.IntStream;
 
 public class DataCollector {
     private static final ObjectMapper mapper = new ObjectMapper();
-    private static final String OUTPUT_FILE = "./src/main/resources/weather_data.json";
+    private static final String OUTPUT_FILE = "weather_data.json";
 
     public static void main(String[] args) {
          final List<String> cities = List.of(

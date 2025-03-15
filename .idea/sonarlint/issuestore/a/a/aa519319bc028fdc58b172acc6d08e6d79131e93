@@ -1,0 +1,19 @@
+
+]
+java:S1854)"BRemove this useless assignment to local variable "aggregatedData".(–“âìÿÿÿÿÿ
+X
+java:S1854$"BRemove this useless assignment to local variable "maxTemperature".(ÖŸ”“
+E	java:S106"+Replace this use of System.out by a logger.(”‘Ážÿÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(¶õžº
+E	java:S106!"+Replace this use of System.out by a logger.(ùß‘áùÿÿÿÿ
+@	java:S106#"+Replace this use of System.out by a logger.(Òƒ™»
+I
+java:S1481$"3Remove this unused "maxTemperature" local variable.(ÖŸ”“
+h
+java:S6204-"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹
+N
+java:S1481)"3Remove this unused "aggregatedData" local variable.(–“âìÿÿÿÿÿ
+J
+java:S1068"/Remove this unused "weatherData" private field.(òÿÉ™øÿÿÿÿ
+B
+java:S1068",Remove this unused "bikeData" private field.(ñ¦äˆ

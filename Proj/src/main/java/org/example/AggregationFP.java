@@ -11,7 +11,6 @@ import java.util.stream.Collectors;
 
 public class AggregationFP {
 
-    // Refactored to be a reusable method that takes input parameters
     public List<String> getFilteredCities(List<WeatherData> weatherList, List<CityBikeInfo> bikeList) {
         return bikeList.stream()
                 .filter(bikeInfo -> bikeInfo.getNumberOfBikes() > 10)

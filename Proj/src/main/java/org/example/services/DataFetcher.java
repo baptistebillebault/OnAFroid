@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class DataFetcher {
-    private static final String API_KEY = "464fe929f92e4eed8e083029251402";  // Replace with a valid API key
+    private static final String API_KEY = "464fe929f92e4eed8e083029251402";
     private static final HttpClient client = HttpClient.newHttpClient();
     private static final ObjectMapper mapper = new ObjectMapper();
 

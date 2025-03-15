@@ -23,25 +23,27 @@ public class Workflow {
         List<WeatherData> weatherDataList = new WeatherDataMapper().getWeatherData();
         System.out.println("Weather data: " + weatherDataList);
         FilterFP filterFP = new FilterFP();
-        Predicate<WeatherData> byRegion = weatherData -> "Ile-de-France".equals(weatherData.getLocation().getRegion());
+        String region = "Provence-Alpes-Cote d'Azur";
+        Predicate<WeatherData> byRegion = weatherData -> region.equals(weatherData.getLocation().getRegion());
         List<WeatherData> filteredByRegion = filterFP.filterWeatherData(weatherDataList, byRegion);
-        System.out.println("Filtered by region: " + filteredByRegion);
+        System.out.println("Filtered by region: " + filteredByRegion + "\n");
         double maxTempCelsius = filteredByRegion.stream()
                 .mapToDouble(weatherData -> weatherData.getCurrent().gettemperature())
                 .max()
                 .orElseThrow(() -> new RuntimeException("No weather data available"));
-        System.out.println("Max temperature in Ile-de-France: " + maxTempCelsius + "°C");
+        System.out.println("Max temperature en " + region + ": " + maxTempCelsius + "°C");
         double maxTempFahrenheit = (maxTempCelsius * 9/5) + 32;
-        System.out.println("Max temperature in Ile-de-France: " + maxTempFahrenheit + "°F");
+        System.out.println("Max temperature in " + region + ": " + maxTempFahrenheit + "°F");
         double maxTemperature = maxTempFahrenheit;
 
         CityBikeInfoMapper cityBikeInfoMapper = new CityBikeInfoMapper();
         List<CityBikeInfo> bikeList = cityBikeInfoMapper.getBikeData();// Assuming you have a BikeDataMapper class
 
-        List<WeatherBikeData> aggregatedData = filteredByRegion.stream()
-                .flatMap(weatherData -> bikeList.stream()
-                        .filter(bikeData -> bikeData.getCity().equals(weatherData.getLocation().getName()))
-                        .map(bikeData -> new Workflow().new WeatherBikeData(weatherData, bikeData)))
-                .collect(Collectors.toList());
+        int minBikes = 5;
+        double minTemperature = 0;
+
+        List<String> filteredCities = filterFP.filterByRegionBikesAndTemperature(bikeList, weatherDataList, region, minBikes, minTemperature);
+        System.out.println("En région " + region + ", il y a " + filteredCities.size() + " villes qui contiennent plus de " + minBikes + " vélos et où il fait plus de " + minTemperature + "°C");
+        filteredCities.forEach(System.out::println);
     }
 }
